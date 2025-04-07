@@ -1,0 +1,594 @@
+/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py:56: FixupWarning: Environment variable DJANGO_SETTINGS_MODULE is defined
+but Django isn't installed.  Won't apply Django fix-ups!
+
+  warnings.warn(FixupWarning(ERR_NOT_INSTALLED))
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1695, in invoke
+    sub_ctx = cmd.make_context(cmd_name, args, parent=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 949, in make_context
+    self.parse_args(ctx, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1417, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2403, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2359, in process_value
+    value = self.type_cast_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2347, in type_cast_value
+    return convert(value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2319, in convert
+    return self.type(value, param=self, ctx=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/types.py", line 84, in __call__
+    return self.convert(value, param, ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/worker.py", line 51, in convert
+    worker_pool = ctx.obj.app.conf.worker_pool
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 111, in __getattr__
+    return self[k]
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 391, in __getitem__
+    return getitem(k)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 249, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 136, in data
+    return self.callback()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 981, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 997, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 122, in config_from_object
+    obj = self._smart_import(obj, imp=self.import_from_cwd)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 137, in _smart_import
+    return symbol_by_name(path, imp=imp)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 91, in import_from_cwd
+    return import_from_cwd(
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/imports.py", line 109, in import_from_cwd
+    return imp(module, package=package)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 88, in import_module
+    return importlib.import_module(module, package=package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django'
+/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py:56: FixupWarning: Environment variable DJANGO_SETTINGS_MODULE is defined
+but Django isn't installed.  Won't apply Django fix-ups!
+
+  warnings.warn(FixupWarning(ERR_NOT_INSTALLED))
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1695, in invoke
+    sub_ctx = cmd.make_context(cmd_name, args, parent=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 949, in make_context
+    self.parse_args(ctx, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1417, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2403, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2365, in process_value
+    value = self.callback(ctx, self, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/beat.py", line 22, in <lambda>
+    callback=lambda ctx, _, value: value or ctx.obj.app.conf.beat_schedule_filename,
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 111, in __getattr__
+    return self[k]
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 391, in __getitem__
+    return getitem(k)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 249, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 136, in data
+    return self.callback()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 981, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 997, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 122, in config_from_object
+    obj = self._smart_import(obj, imp=self.import_from_cwd)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 137, in _smart_import
+    return symbol_by_name(path, imp=imp)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 91, in import_from_cwd
+    return import_from_cwd(
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/imports.py", line 109, in import_from_cwd
+    return imp(module, package=package)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 88, in import_module
+    return importlib.import_module(module, package=package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django'
+/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py:56: FixupWarning: Environment variable DJANGO_SETTINGS_MODULE is defined
+but Django isn't installed.  Won't apply Django fix-ups!
+
+  warnings.warn(FixupWarning(ERR_NOT_INSTALLED))
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1695, in invoke
+    sub_ctx = cmd.make_context(cmd_name, args, parent=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 949, in make_context
+    self.parse_args(ctx, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1417, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2403, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2359, in process_value
+    value = self.type_cast_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2347, in type_cast_value
+    return convert(value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2319, in convert
+    return self.type(value, param=self, ctx=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/types.py", line 84, in __call__
+    return self.convert(value, param, ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/worker.py", line 51, in convert
+    worker_pool = ctx.obj.app.conf.worker_pool
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 111, in __getattr__
+    return self[k]
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 391, in __getitem__
+    return getitem(k)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 249, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 136, in data
+    return self.callback()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 981, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 997, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 122, in config_from_object
+    obj = self._smart_import(obj, imp=self.import_from_cwd)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 137, in _smart_import
+    return symbol_by_name(path, imp=imp)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 91, in import_from_cwd
+    return import_from_cwd(
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/imports.py", line 109, in import_from_cwd
+    return imp(module, package=package)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 88, in import_module
+    return importlib.import_module(module, package=package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django'
+/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py:56: FixupWarning: Environment variable DJANGO_SETTINGS_MODULE is defined
+but Django isn't installed.  Won't apply Django fix-ups!
+
+  warnings.warn(FixupWarning(ERR_NOT_INSTALLED))
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1695, in invoke
+    sub_ctx = cmd.make_context(cmd_name, args, parent=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 949, in make_context
+    self.parse_args(ctx, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1417, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2403, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2365, in process_value
+    value = self.callback(ctx, self, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/beat.py", line 22, in <lambda>
+    callback=lambda ctx, _, value: value or ctx.obj.app.conf.beat_schedule_filename,
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 111, in __getattr__
+    return self[k]
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 391, in __getitem__
+    return getitem(k)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 249, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 136, in data
+    return self.callback()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 981, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 997, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 122, in config_from_object
+    obj = self._smart_import(obj, imp=self.import_from_cwd)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 137, in _smart_import
+    return symbol_by_name(path, imp=imp)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 91, in import_from_cwd
+    return import_from_cwd(
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/imports.py", line 109, in import_from_cwd
+    return imp(module, package=package)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 88, in import_module
+    return importlib.import_module(module, package=package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django'
+/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py:56: FixupWarning: Environment variable DJANGO_SETTINGS_MODULE is defined
+but Django isn't installed.  Won't apply Django fix-ups!
+
+  warnings.warn(FixupWarning(ERR_NOT_INSTALLED))
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1695, in invoke
+    sub_ctx = cmd.make_context(cmd_name, args, parent=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 949, in make_context
+    self.parse_args(ctx, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1417, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2403, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2359, in process_value
+    value = self.type_cast_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2347, in type_cast_value
+    return convert(value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2319, in convert
+    return self.type(value, param=self, ctx=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/types.py", line 84, in __call__
+    return self.convert(value, param, ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/worker.py", line 51, in convert
+    worker_pool = ctx.obj.app.conf.worker_pool
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 111, in __getattr__
+    return self[k]
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 391, in __getitem__
+    return getitem(k)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 249, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 136, in data
+    return self.callback()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 981, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 997, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 122, in config_from_object
+    obj = self._smart_import(obj, imp=self.import_from_cwd)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 137, in _smart_import
+    return symbol_by_name(path, imp=imp)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 91, in import_from_cwd
+    return import_from_cwd(
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/imports.py", line 109, in import_from_cwd
+    return imp(module, package=package)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 88, in import_module
+    return importlib.import_module(module, package=package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django'
+/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py:56: FixupWarning: Environment variable DJANGO_SETTINGS_MODULE is defined
+but Django isn't installed.  Won't apply Django fix-ups!
+
+  warnings.warn(FixupWarning(ERR_NOT_INSTALLED))
+/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py:56: FixupWarning: Environment variable DJANGO_SETTINGS_MODULE is defined
+but Django isn't installed.  Won't apply Django fix-ups!
+
+  warnings.warn(FixupWarning(ERR_NOT_INSTALLED))
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1695, in invoke
+    sub_ctx = cmd.make_context(cmd_name, args, parent=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 949, in make_context
+    self.parse_args(ctx, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1417, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2403, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2359, in process_value
+    value = self.type_cast_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2347, in type_cast_value
+    return convert(value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2319, in convert
+    return self.type(value, param=self, ctx=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/types.py", line 84, in __call__
+    return self.convert(value, param, ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/worker.py", line 51, in convert
+    worker_pool = ctx.obj.app.conf.worker_pool
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 111, in __getattr__
+    return self[k]
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 391, in __getitem__
+    return getitem(k)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 249, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 136, in data
+    return self.callback()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 981, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 997, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 122, in config_from_object
+    obj = self._smart_import(obj, imp=self.import_from_cwd)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 137, in _smart_import
+    return symbol_by_name(path, imp=imp)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 91, in import_from_cwd
+    return import_from_cwd(
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/imports.py", line 109, in import_from_cwd
+    return imp(module, package=package)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 88, in import_module
+    return importlib.import_module(module, package=package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django'
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1695, in invoke
+    sub_ctx = cmd.make_context(cmd_name, args, parent=ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 949, in make_context
+    self.parse_args(ctx, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1417, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2403, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 2365, in process_value
+    value = self.callback(ctx, self, value)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/beat.py", line 22, in <lambda>
+    callback=lambda ctx, _, value: value or ctx.obj.app.conf.beat_schedule_filename,
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 111, in __getattr__
+    return self[k]
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 391, in __getitem__
+    return getitem(k)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/collections.py", line 249, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 136, in data
+    return self.callback()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 981, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/base.py", line 997, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 122, in config_from_object
+    obj = self._smart_import(obj, imp=self.import_from_cwd)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 137, in _smart_import
+    return symbol_by_name(path, imp=imp)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/kombu/utils/imports.py", line 59, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 91, in import_from_cwd
+    return import_from_cwd(
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/imports.py", line 109, in import_from_cwd
+    return imp(module, package=package)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 88, in import_module
+    return importlib.import_module(module, package=package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django'
+celery beat v5.4.0 (opalescent) is starting.
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/base.py", line 135, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/worker.py", line 348, in worker
+    worker = app.Worker(
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/worker/worker.py", line 93, in __init__
+    self.app.loader.init_worker()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 110, in init_worker
+    self.import_default_modules()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 104, in import_default_modules
+    raise response
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py", line 100, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py", line 138, in validate_models
+    self.django_setup()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py", line 134, in django_setup
+    django.setup()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/apps/config.py", line 193, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'rest_framework'
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/click/decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/base.py", line 135, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/bin/beat.py", line 72, in beat
+    return beat().run()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/apps/beat.py", line 82, in run
+    self.init_loader()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/apps/beat.py", line 132, in init_loader
+    self.app.loader.init_worker()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 110, in init_worker
+    self.import_default_modules()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/loaders/base.py", line 104, in import_default_modules
+    raise response
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py", line 100, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py", line 138, in validate_models
+    self.django_setup()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/fixups/django.py", line 134, in django_setup
+    django.setup()
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/apps/config.py", line 193, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'rest_framework'

@@ -1,0 +1,232 @@
+nohup: ignoring input
+ 
+ -------------- worker1@DESKTOP-2OLMUVD v5.4.0 (opalescent)
+--- ***** ----- 
+-- ******* ---- Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.29 2025-02-17 00:13:36
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         fpl_project:0x7fdd56088640
+- ** ---------- .> transport:   redis://localhost:6380/0
+- ** ---------- .> results:     redis://localhost:6380/1
+- *** --- * --- .> concurrency: 4 (solo)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . fpl.tasks.fetch_fpl_data
+  . fpl_project.celery.debug_task
+
+[2025-02-17 00:13:36,853: WARNING/MainProcess] /home/kevo/fpl_env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2025-02-17 00:13:36,939: INFO/MainProcess] Connected to redis://localhost:6380/0
+[2025-02-17 00:13:36,942: WARNING/MainProcess] /home/kevo/fpl_env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2025-02-17 00:13:36,990: INFO/MainProcess] mingle: searching for neighbors
+[2025-02-17 00:13:38,105: INFO/MainProcess] mingle: all alone
+[2025-02-17 00:13:38,210: INFO/MainProcess] worker1@DESKTOP-2OLMUVD ready.
+[2025-02-17 00:15:00,123: INFO/MainProcess] Task fpl.tasks.fetch_fpl_data[d791db9a-d45e-4364-85cf-aff03250f70e] received
+[2025-02-17 00:15:00,340: ERROR/MainProcess] Task fpl.tasks.fetch_fpl_data[d791db9a-d45e-4364-85cf-aff03250f70e] raised unexpected: ModuleNotFoundError("No module named 'requests'")
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/tasks.py", line 6, in fetch_fpl_data
+    call_command("fetch_fpl_data")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 118, in call_command
+    command = load_command_class(app_name, command_name)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/management/commands/fetch_fpl_data.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2025-02-17 00:15:53,147: INFO/MainProcess] Task fpl.tasks.fetch_fpl_data[0077521b-aae7-4d3f-afb5-8a4f291ea04e] received
+[2025-02-17 00:15:53,198: ERROR/MainProcess] Task fpl.tasks.fetch_fpl_data[0077521b-aae7-4d3f-afb5-8a4f291ea04e] raised unexpected: ModuleNotFoundError("No module named 'requests'")
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/tasks.py", line 6, in fetch_fpl_data
+    call_command("fetch_fpl_data")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 118, in call_command
+    command = load_command_class(app_name, command_name)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/management/commands/fetch_fpl_data.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2025-02-17 00:20:00,165: INFO/MainProcess] Task fpl.tasks.fetch_fpl_data[2db51f0e-4dd4-475f-ad06-bcbc7e1e9dd4] received
+[2025-02-17 00:20:00,194: ERROR/MainProcess] Task fpl.tasks.fetch_fpl_data[2db51f0e-4dd4-475f-ad06-bcbc7e1e9dd4] raised unexpected: ModuleNotFoundError("No module named 'requests'")
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/tasks.py", line 6, in fetch_fpl_data
+    call_command("fetch_fpl_data")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 118, in call_command
+    command = load_command_class(app_name, command_name)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/management/commands/fetch_fpl_data.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2025-02-17 00:25:00,110: INFO/MainProcess] Task fpl.tasks.fetch_fpl_data[16188b64-4447-494f-834f-ade608db83c6] received
+[2025-02-17 00:25:00,139: ERROR/MainProcess] Task fpl.tasks.fetch_fpl_data[16188b64-4447-494f-834f-ade608db83c6] raised unexpected: ModuleNotFoundError("No module named 'requests'")
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/tasks.py", line 6, in fetch_fpl_data
+    call_command("fetch_fpl_data")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 118, in call_command
+    command = load_command_class(app_name, command_name)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/management/commands/fetch_fpl_data.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2025-02-17 00:26:53,094: INFO/MainProcess] missed heartbeat from worker2@DESKTOP-2OLMUVD
+[2025-02-17 06:47:34,945: INFO/MainProcess] Task fpl.tasks.fetch_fpl_data[28efdd80-b249-4ec0-a686-96bd8542e8e2] received
+[2025-02-17 06:47:35,011: ERROR/MainProcess] Task fpl.tasks.fetch_fpl_data[28efdd80-b249-4ec0-a686-96bd8542e8e2] raised unexpected: ModuleNotFoundError("No module named 'requests'")
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/tasks.py", line 6, in fetch_fpl_data
+    call_command("fetch_fpl_data")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 118, in call_command
+    command = load_command_class(app_name, command_name)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/management/commands/fetch_fpl_data.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2025-02-17 06:50:00,079: INFO/MainProcess] Task fpl.tasks.fetch_fpl_data[5a608eeb-3d0e-43e1-a79f-1a3195c3aa46] received
+[2025-02-17 06:50:00,102: ERROR/MainProcess] Task fpl.tasks.fetch_fpl_data[5a608eeb-3d0e-43e1-a79f-1a3195c3aa46] raised unexpected: ModuleNotFoundError("No module named 'requests'")
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/tasks.py", line 6, in fetch_fpl_data
+    call_command("fetch_fpl_data")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 118, in call_command
+    command = load_command_class(app_name, command_name)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/management/commands/fetch_fpl_data.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2025-02-17 06:50:40,693: INFO/MainProcess] Task fpl.tasks.fetch_fpl_data[03c32929-bcc0-4d4c-940a-2b5163e31318] received
+[2025-02-17 06:50:40,816: ERROR/MainProcess] Task fpl.tasks.fetch_fpl_data[03c32929-bcc0-4d4c-940a-2b5163e31318] raised unexpected: ModuleNotFoundError("No module named 'requests'")
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/tasks.py", line 6, in fetch_fpl_data
+    call_command("fetch_fpl_data")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 118, in call_command
+    command = load_command_class(app_name, command_name)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/management/commands/fetch_fpl_data.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2025-02-17 06:55:00,111: INFO/MainProcess] Task fpl.tasks.fetch_fpl_data[470cf907-bd9f-4edc-8f93-9ad8f1f38cac] received
+[2025-02-17 06:55:00,242: ERROR/MainProcess] Task fpl.tasks.fetch_fpl_data[470cf907-bd9f-4edc-8f93-9ad8f1f38cac] raised unexpected: ModuleNotFoundError("No module named 'requests'")
+Traceback (most recent call last):
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/tasks.py", line 6, in fetch_fpl_data
+    call_command("fetch_fpl_data")
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 118, in call_command
+    command = load_command_class(app_name, command_name)
+  File "/home/kevo/fpl_env/lib/python3.8/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/ADMIN/fpl_project/fpl/management/commands/fetch_fpl_data.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+worker: Warm shutdown (MainProcess)

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Players</h2>
+    <ul>
+        {% for player in players %}
+            <li>{{ player.name }} - Position: {{ player.position }}</li>
+        {% empty %}
+            <li>No players found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

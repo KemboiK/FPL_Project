@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Fixtures</h2>
+    <ul>
+        {% for fixture in fixtures %}
+            <li>{{ fixture.home_team }} vs {{ fixture.away_team }} - {{ fixture.date }}</li>
+        {% empty %}
+            <li>No fixtures available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
